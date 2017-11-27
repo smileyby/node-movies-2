@@ -19,4 +19,6 @@ Aborted due to warnings.
 ```
 Error: listen EADDRINUSE :::3000
 ```
-> 原因是已经在`gruntfile.js`文件中配置了监听的端口，在`app.js`文件中再次去监听相同端口所以报错了，注释掉`app.js`中的`app.listen('3000')`
+> 原因启动了多个git brash窗口启动同一个服务造成端口被占用
+
+* 后续测试时发现不能注释`app.listen(port)`否则无法启动服务，导致无法显示页面。
